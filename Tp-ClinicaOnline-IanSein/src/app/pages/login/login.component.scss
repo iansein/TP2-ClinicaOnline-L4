@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Raleway:wght@800&display=swap');
+
+  
+.titulo{
+  font-family: 'Raleway', sans-serif;
+}
+
+.form-login{
+  font-family: 'Quicksand', sans-serif;
+}
+
+.fondo-login{
+  background-image: url("../../../assets/clinica-login.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 90.25vh;
+}
+
+.mensaje-error {
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(115, 7, 7);
+  padding: 0px 5px;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+
+
+.button-container div {
+  display: inline-block;
+  margin-left: 40px;
+  padding-bottom: 0px;
+}
+
+.btn-login {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  margin: 0 auto;
+  border: 2px #ffff solid;
+  color: #ffffff;
+  padding: 16px 20px;
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+.btn-login span:last-child {
+  display: none;
+}
+
+.btn-login:hover {
+  color: #fff;
+}
+
+.btn-login::after {
+   content: "";
+  background: #17444f;
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.btn-login:hover::after{
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000000;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #17444f;
+  border-bottom-color: #4b9a81;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

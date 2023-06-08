@@ -1,0 +1,119 @@
+.registro-container {
+  margin-bottom: 0px;
+  background-image: url("../../../assets/clinica.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 90.25vh;
+  margin: 0 auto;
+}
+
+.opcion-registros {
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-form {
+  div {
+    background-color: rgb(32, 121, 120);
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-bottom: 1rem;  
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 2px 2px 4px #000;
+    height: 350px;
+    overflow: hidden;
+    color: #fff;
+    h2 {
+      margin: 0 auto;
+      margin-top: 50px;
+      text-align: center;
+      text-shadow: 1px 1px #000;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+      width: 260px;
+      border-radius: 10px;
+    }
+  }
+  div:hover {
+    color: #000000;
+    background: rgb(249, 219, 219);
+    cursor: pointer;
+    transition: background 0.5s, color 0.5s;
+  }
+}
+
+.registro-paciente,
+.registro-especialista {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 17px;
+}
+
+.btn-volver {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  background-color: transparent;
+}
+.btn-volver:hover {
+  transform: translateY(-5px);
+}
+
+.img-logo{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000000;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #17444f;
+  border-bottom-color: #4b9a81;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
