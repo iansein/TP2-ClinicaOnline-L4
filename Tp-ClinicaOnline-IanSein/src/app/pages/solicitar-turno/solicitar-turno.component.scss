@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Raleway:wght@800&display=swap');
+/* BASIC */
+
+
+.especialista-activo{
+    font-family: Raleway, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.solicitar-turno-container {
+  font-family: "Poppins", sans-serif;
+  background-image: url("../../../assets/solicitarturno.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 90.25vh;
+}
+
+.solicitar-turno {
+  position: absolute;
+  width: 95vw;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #236c7d;
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.534);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px #000;
+    font-weight: bolder;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    margin-bottom: 1rem;
+  }
+  label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.carta-especialista,
+.carta-turno {
+  height: 50vh;
+  border: 2px solid #fff;
+  background: #236c7d;
+  box-shadow: 2px 2px 4px #000;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  img {
+    margin-top: 2rem;
+    width: 10rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 1px 1px #000;
+    margin-top: 1rem;
+  }
+}
+.carta-especialista:hover {
+  transition: background 0.5s;
+  cursor: pointer;
+}
+
+.carta-turno {
+  background-color: #236c7d;
+  height: 60vh;
+  img {
+    margin-top: 4rem;
+  }
+}
+
+.especialidades {
+  height: 50vh;
+  border: 2px solid #fff;
+  background: #236c7d;
+  box-shadow: 2px 2px 4px #000;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  img {
+    margin-top: 2rem;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 4px #000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 1px 1px #000;
+    margin-top: 1rem;
+  }
+}
+
+.especialidad-nombre{
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 1px 1px #000;
+    margin: 0 auto;
+    margin-top: 170px;
+}
+.especialidades:hover {
+  background: #4b9a81;
+  transition: background 0.5s;
+  cursor: pointer;
+}
+
+.turnos-desk {
+  display: block;
+}
+
+.turnos-resp {
+  display: none;
+}
+
+.contenedor-btn-hora {
+  overflow-y: scroll;
+  height: 15rem;
+}
+
+// RESPONSIVE
+
+@media screen and (max-width: 480px) {
+  .solicitar-turno-container {
+    min-height: 100vh;
+  }
+
+  .contenedor-especialistas {
+    background: #236c7d;
+    padding-top: 24rem;
+  }
+
+  .contenerdor-carta-esp {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .carta-especialista {
+    background: #236c7d;
+    margin-bottom: 2rem;
+  }
+
+  .especialidades {
+    margin-top: 1rem;
+  }
+
+  .carta-turno {
+    height: fit-content;
+    width: 100%;
+    img {
+      margin-top: 2rem;
+    }
+  }
+
+  .turnos-desk {
+    display: none;
+  }
+
+  .turnos-resp {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .btn-dia {
+    width: 8rem;
+  }
+
+  .contenedor-btn-hora {
+    height: 8rem;
+  }
+  
+}

@@ -1,0 +1,113 @@
+
+<div class="tabla-usuario text-focus-in" *ngIf="!createrUserMenu">
+  <h3 style="font-size: 2rem; font-weight: bolder">LISTADO DE USUARIOS</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" style="color: #000;">PERFIL</th>
+        <th scope="col" style="color: #000;">NOMBRE</th>
+        <th scope="col" style="color: #000;">APELLIDO</th>
+        <th scope="col" style="color: #000;">ACCIÓN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tr-tabla" *ngFor="let user of usersList">
+
+        <td style="text-transform: upperCase">
+          <span>{{ user.perfil }}</span>
+        </td>
+        <td>
+          <span>{{ user.nombre }}</span>
+        </td>
+        <td>
+          <span>{{ user.apellido }}</span>
+        </td>
+        <td>
+          <div *ngIf="user.perfil == 'especialista'">
+            <button
+              class="btn-habilitar"
+              *ngIf="!user.aprobado"
+              (click)="updateUser(user, 1)"
+            >
+              Habilitar
+            </button>
+            <button
+              class="btn-deshabilitar"
+              *ngIf="user.aprobado"
+              (click)="updateUser(user, 2)"
+            >
+              Deshabilitar
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<button
+  class="btn-habilitar btn-nuevo-usuario"
+  *ngIf="!createrUserMenu"
+  (click)="showCreateUserMenu()"
+>
+  REGISTRAR NUEVO USUARIO
+</button>
+
+
+<button
+  class="btn-habilitar btn-menu-volver"
+  *ngIf="createrUserMenu"
+  (click)="showUserList()"
+>
+  VOLVER AL LISTADO DE USUARIOS
+</button>
+
+<div
+  class="opcion-registros row"
+  *ngIf="
+    !formPaciente && !formEspecialista && !formAdministrador && createrUserMenu
+  "
+>
+  <div class="col text-focus-in" (click)="goToFormPaciente()">
+    <div>
+      <h2>Paciente</h2>
+      <img src="../../../assets/paciente.png" alt="imagen paciente" />
+    </div>
+  </div>
+  <div class="col text-focus-in" (click)="goToFormEspecialista()">
+    <div>
+      <h2>Especialista</h2>
+      <img src="../../../assets/especialista.png" alt="imagen especialista" />
+    </div>
+  </div>
+  <div class="col text-focus-in" (click)="goToFormAdministrador()">
+    <div>
+      <h2>Administrador</h2>
+      <img src="../../../assets/admin.png" alt="imagen adminitrador" />
+    </div>
+  </div>
+</div>
+
+<div class="registro-paciente" *ngIf="formPaciente">
+  <button class="btn-volver text-focus-in" (click)="goToRegistro()">
+    Volver
+  </button>
+  <app-alta-paciente></app-alta-paciente>
+</div>
+<div class="registro-especialista" *ngIf="formEspecialista">
+  <button class="btn-volver text-focus-in" (click)="goToRegistro()">
+    Volver
+  </button>
+  <app-alta-especialista></app-alta-especialista>
+</div>
+<div class="registro-especialista" *ngIf="formAdministrador">
+  <button class="btn-volver text-focus-in" (click)="goToRegistro()">
+    Volver
+  </button>
+  <app-alta-administrador></app-alta-administrador>
+</div>
+
+<div class="usuarios-container"></div>
+<div *ngIf="spinner" class="spinner-container">
+  <div class="spinner"></div>
+</div>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Raleway:wght@800&display=swap');
+
+.user-buttons {
+  background: rgb(32, 121, 120);
+  position: absolute;
+  margin: 0 auto;
+  top: 160%;
+  left: -39%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  border: #fff 3px solid;
+  margin-top: 10px;
+}
+
+.user-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  border-radius: 50%;
+  height: 100%;
+}
+
+.fab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  border-radius: 50%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.fab-button:hover {
+  transform: translateY(-5px);
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-family: 'Raleway', sans-serif;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #000;
+}

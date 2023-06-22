@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Raleway:wght@800&display=swap');
+/* BASIC */
+
+.turnos-container {
+  font-family: 'Raleway', sans-serif;
+  background-image: url("../../../assets/misturnos.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 90.25vh;
+}
+
+.turnos {
+  position: absolute;
+  overflow-y: scroll;
+  width: 90vw;
+  height: 80vh;
+  top: 18%;
+  left: 5%;
+  //   transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #236c7d;
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.534);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px #000;
+    font-weight: bolder;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    margin-bottom: 1rem;
+  }
+  label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.tabla-usuario {
+  font-family: Raleway, sans-serif;
+  height: 75%;
+  overflow-y: scroll;
+  z-index: 100;
+  left: 5%;
+  top: 18%;
+  background: #000;
+  color: #fff;
+  padding: 1rem;
+  background: #17444f;
+  border: 2px solid #fff;
+  box-shadow: 2px 2px 4px #000;
+  text-shadow: 1px 1px #000;
+  h3 {
+    text-align: center;
+  }
+  table {
+    color: #fff;
+    font-weight: 400;
+  }
+}
+
+.tr-tabla:hover {
+  color: #fff;
+  background: #4b9a81;
+  transition: background 0.5s;
+}
+
+.btn-especialista:hover {
+  background: rgb(0, 0, 0);
+  box-shadow: 2px 2px 4px #000;
+}
+
+.btn-cancelar{
+  color: #ffff;
+  background: #660101;
+  box-shadow: 2px 2px 4px #000;
+}
+.btn-cancelar:hover {
+  background: #ff0000;
+  box-shadow: 2px 2px 4px #000;
+}
+.btn-confirmar:hover {
+  background: #18e809;
+}
+
+.estado {
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(255, 255, 255);
+  background: #0071b3;
+}
+
+.input-busqueda {
+  width: 15rem;
+  border: 3px solid rgb(0, 119, 255);
+  border-radius: 10px;
+  height: 2rem;
+  padding-left: 1rem;
+  box-shadow: 2px 2px 4px #000;
+}
+
+.input-busqueda:focus {
+  border: 3px solid rgb(0, 119, 255);
+  box-shadow: 0 0 12px #0099ff;
+  transition: box-shadow 0.5s;
+}
+
+// RESPONSIVE
+
+@media screen and (max-width: 480px) {
+  .turnos-container {
+    min-height: 100vh;
+  }
+  .turnos {
+    overflow-y: scroll;
+    overflow-x: scroll;
+    width: 95vw;
+    height: 85vh;
+    top: 14%;
+    left: 2%;
+  }
+  .input-busqueda {
+    width: 10rem;
+    margin-bottom: 0.5rem;
+  }
+  .tabla-usuario {
+    width: 100%;
+  }
+}
