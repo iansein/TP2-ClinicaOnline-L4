@@ -45,3 +45,16 @@
 
 ### Podremos dejar un comentario para calificar luego de que el turno se haya finalizado o un comentario al momento de cancelar de porque lo estamos cancelando al turno.
 ![](README/misturnos2.png)
+
+# VISTAS DE UN ESPECIALISTA
+### Al iniciar sesión como un especialista podremos navegar a las siguientes secciones: "MI PERFIL" - "PACIENTES" - "MIS TURNOS"
+![](README/inicioespecialista.png)
+
+## MI PERFIL
+### Dentro de esta sección podremos visualizar todos los datos de nuestro perfil, asignar los dias que tenemos disponibles para atender cierta especilidad y cambiar la duracion mínimca del turno.
+![](README/perfilespecialista.png)
+
+## MIS TURNOS
+### En esta sección podremos visualizar los turnos solicitados por un paciente con nosotros y podremos realizar las siguientes acciones: "Aceptar el turno" y "Rechazarlo". Una vez aceptado tendremos la oportunidad de finalizarlo o cancelarlo. Al finalizarlo se nos habilitara la opción de "Calificar" en el que podremos dejar un comentario. Una vez hecho el comentario tendremos la opcion de "Cargar la historia clínica" para ingresar todos los datos del paciente.
+
+![](README/misturnosespecialista.png)
