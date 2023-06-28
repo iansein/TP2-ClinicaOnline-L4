@@ -63,8 +63,8 @@
 ![](README/misturnosespecialista2.png)
 
 ## PACIENTES
-### En esta seccion podremos se mostraran los pacientes que el especialista haya atendido al menos 1 vez. Se podra visualizar su historia clínica, detalles de sus turnos y reseñas del mismo.
-![](README/pacientes1.png)
+### En esta seccion se mostraran los pacientes que el especialista haya atendido al menos 1 vez. Se podra visualizar su historia clínica, detalles de sus turnos y reseñas del mismo.
+![](README/pacientes.png)
 ![](README/pacientes2.png)
 
 # VISTAS DE UN ADMINISTRADOR
