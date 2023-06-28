@@ -29,12 +29,19 @@
 ![](README/miperfilpaciente.png)
 
 ## SOLICITAR TURNO
-## En esta sección podremos solicitar un turno seleccionando un especialista y luego la especialidad en la cual nos querramos atender.
+### En esta sección podremos solicitar un turno seleccionando un especialista y luego la especialidad en la cual nos querramos atender.
 ![](README/solicitarturno1.png)
 ![](README/solicitarturno2.png)
 
-## Luego se nos desplegara una ventana con todos los días y horarios disponibles del especialista en esa especialidad. Podremos seleccionar el dia y horario en el cual querramos atendernos.
+### Luego se nos desplegara una ventana con todos los días y horarios disponibles del especialista en esa especialidad. Podremos seleccionar el dia y horario en el cual querramos atendernos.
 ![](README/solicitarturno3.png)
 
-## Al seleccionar el día y horario podremos solicitar el turno.
+### Al seleccionar el día y horario podremos solicitar el turno.
 ![](README/solicitarturno4.png)
+
+## MIS TURNOS
+### En esta sección podremos visualizar nuestros turnos solicitados en un principio y luego como estos van cambiando su ESTADO dependiendo de si fue "Aceptado", "Rechazado", "Cancelado", "Finalizado".
+![](README/misturnos1.png)
+
+### Podremos dejar un comentario para calificar luego de que el turno se haya finalizado o un comentario al momento de cancelar de porque lo estamos cancelando al turno.
+![](README/misturnos2.png)
