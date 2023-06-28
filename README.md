@@ -25,7 +25,7 @@
 ![](README/iniciopaciente.png)
 
 ## MI PERFIL
-### Dentro de esta sección podremos visualizar todos los datos de nuestro perfil. En el caso de tener un historial clínico podremos visualizarlo tambien desde esta sección.
+### Dentro de esta sección podremos visualizar todos los datos de nuestro perfil. En el caso de tener un historial clínico podremos visualizarlo tambien desde esta sección y descargarlo en formato PDF. 
 ![](README/miperfilpaciente.png)
 ![](README/perfilhistorial.png)
 ![](README/perfilhistorial2.png)
@@ -88,7 +88,7 @@
 ![](README/usuarios.png)
 
 ## INFORMES
-### En esta sección podremos visualizar gráficos y estadísticas de nuestro sistema.
+### En esta sección podremos visualizar gráficos y estadísticas de nuestro sistema. Estos se pueden descargar en formato PDF y EXCEL.
 ![](README/informes.png)
 
 ## LOG DE INGRESOS AL SISTEMA
