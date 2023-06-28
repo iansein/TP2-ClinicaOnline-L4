@@ -86,3 +86,20 @@
 ![](README/usuarios.png)
 
 ## INFORMES
+### En esta sección podremos visualizar gráficos y estadísticas de nuestro sistema.
+![](README/informes.png)
+
+## LOG DE INGRESOS AL SISTEMA
+![](README/logusuarios.png)
+
+## CANTIDAD DE TURNOS POR ESPECIALIDAD
+![](README/turnosporespecialidad.png)
+
+## CANTIDAD DE TURNOS POR DÍA
+![](README/turnospordia.png)
+
+## CANTIDAD DE TURNOS SOLICITADOS POR MÉDICO EN UN LAPSO DE TIEMPO
+![](README/turnossolicitados.png)
+
+## CANTIDAD DE TURNOS FINALIZADOS POR MÉDICO EN UN LAPSO DE TIEMPO
+![](README/turnosfinalizados.png)
