@@ -51,7 +51,7 @@
 ![](README/inicioespecialista.png)
 
 ## MI PERFIL
-### Dentro de esta sección podremos visualizar todos los datos de nuestro perfil, asignar los dias que tenemos disponibles para atender cierta especilidad y cambiar la duracion mínimca del turno.
+### Dentro de esta sección podremos visualizar todos los datos de nuestro perfil, asignar los dias que tenemos disponibles para atender cierta especilidad y cambiar la duracion mínima del turno.
 ![](README/miperfilespecialista.png)
 
 ## MIS TURNOS
