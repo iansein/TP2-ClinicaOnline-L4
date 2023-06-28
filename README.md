@@ -41,7 +41,7 @@
 
 ## MIS TURNOS
 ### En esta sección podremos visualizar nuestros turnos solicitados en un principio y luego como estos van cambiando su ESTADO dependiendo de si fue "Aceptado", "Rechazado", "Cancelado", "Finalizado".
-![](README/misturnos1.png)
+![](README/misturnos.png)
 
 ### Podremos dejar un comentario para calificar luego de que el turno se haya finalizado o un comentario al momento de cancelar de porque lo estamos cancelando al turno.
 ![](README/misturnos2.png)
