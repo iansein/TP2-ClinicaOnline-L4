@@ -5,3 +5,11 @@
 # INICIO
 
 ![](README/home.png)
+
+# REGISTRO
+
+# INICIO DE SESIÓN
+
+### En esta sección podremos iniciar sesión con nuestra cuenta ya previamente creada. Ademas contamos con un apartado de acceso rápido en la esquina inferior izquierda con el cual podremos acceder como "Paciente", "Especialista" o "Administrador.
+![](README/login.png)
+
