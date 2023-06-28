@@ -52,9 +52,37 @@
 
 ## MI PERFIL
 ### Dentro de esta sección podremos visualizar todos los datos de nuestro perfil, asignar los dias que tenemos disponibles para atender cierta especilidad y cambiar la duracion mínimca del turno.
-![](README/perfilespecialista.png)
+![](README/miperfilespecialista.png)
 
 ## MIS TURNOS
 ### En esta sección podremos visualizar los turnos solicitados por un paciente con nosotros y podremos realizar las siguientes acciones: "Aceptar el turno" y "Rechazarlo". Una vez aceptado tendremos la oportunidad de finalizarlo o cancelarlo. Al finalizarlo se nos habilitara la opción de "Calificar" en el que podremos dejar un comentario. Una vez hecho el comentario tendremos la opcion de "Cargar la historia clínica" para ingresar todos los datos del paciente.
 
 ![](README/misturnosespecialista.png)
+![](README/misturnosespecialista2.png)
+
+## PACIENTES
+### En esta seccion podremos se mostraran los pacientes que el especialista haya atendido al menos 1 vez. Se podra visualizar su historia clínica, detalles de sus turnos y reseñas del mismo.
+![](README/pacientes1.png)
+![](README/pacientes2.png)
+
+# VISTAS DE UN ADMINISTRADOR
+### Al iniciar sesión como un paciente podremos navegar a las siguientes secciones: "MI PERFIL" - "SOLICITAR TURNO" - "TURNOS" - "USUARIOS" - "INFORMES"
+![](README/inicioadmin.png)
+
+## MI PERFIL
+### Dentro de esta sección podremos visualizar todos los datos de nuestro perfil.
+![](README/miperfiladmin.png)
+
+## TURNOS
+### Dentro de esta sección se visualizaran los turnos de la clínica donde se podran cancelar los mismos solo si no fue fue aceptado, realizado o rechazado, dejando un comentario del motivo.
+![](README/turnos.png)
+
+## SOLICITAR TURNO
+### En esta sección podremos solicitar un turno para un paciente en específico. Luego de seleccionarlo se sigue el mismo proceso que realiza un paciente al solicitar un turno.
+![](README/solicitarturnoadmin.png)
+
+## USUARIOS
+### En esta seccion se puede visualizar un listado de todos los usuarios registrados en la Clínica Online. Tendremos la opción de registrar un nuevo usuario con el rol de "Paciente", "Especialista" o "Administrador". Tambien contamos con una opcion para descargar el listado de usuarios en formato EXCEL y una opcion con un botón con la foto y nombre del usuario que al presionarlo descarga los datos de que turnos tomo un paciente y con quien en formato EXCEL.
+![](README/usuarios.png)
+
+## INFORMES
