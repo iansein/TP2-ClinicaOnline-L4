@@ -25,6 +25,16 @@ Lo primero con lo que nos encontramos es con la página de inicio donde se nos d
 ![](README/iniciopaciente.png)
 
 ## MI PERFIL
+### Dentro de esta sección podremos visualizar todos los datos de nuestro perfil. En el caso de tener un historial clínico podremos visualizarlo tambien desde esta sección.
 ![](README/miperfilpaciente.png)
-###
 
+## SOLICITAR TURNO
+## En esta sección podremos solicitar un turno seleccionando un especialista y luego la especialidad en la cual nos querramos atender.
+![](README/solicitarturno1.png)
+![](README/solicitarturno2.png)
+
+## Luego se nos desplegara una ventana con todos los días y horarios disponibles del especialista en esa especialidad. Podremos seleccionar el dia y horario en el cual querramos atendernos.
+![](README/solicitarturno3.png)
+
+## Al seleccionar el día y horario podremos solicitar el turno.
+![](README/solicitarturno4.png)
