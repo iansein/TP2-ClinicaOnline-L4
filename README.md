@@ -27,6 +27,8 @@
 ## MI PERFIL
 ### Dentro de esta sección podremos visualizar todos los datos de nuestro perfil. En el caso de tener un historial clínico podremos visualizarlo tambien desde esta sección.
 ![](README/miperfilpaciente.png)
+![](README/perfilhistorial.png)
+![](README/perfilhistorial2.png)
 
 ## SOLICITAR TURNO
 ### En esta sección podremos solicitar un turno seleccionando un especialista y luego la especialidad en la cual nos querramos atender.
