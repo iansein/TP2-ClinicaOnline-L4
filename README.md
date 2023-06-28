@@ -8,6 +8,13 @@
 
 # REGISTRO
 
+### En esta sección tendremos la opción de registrarnos como "Paciente" o "Especialista".
+![](README/registro.png)
+
+### Luego dependiendo de nuestra elección nos aparecera el formulario de registro de "Especialista" o el de "Paciente".
+![](README/registropaciente.png)
+![](README/registroespecialista.png)
+
 # INICIO DE SESIÓN
 
 ### En esta sección podremos iniciar sesión con nuestra cuenta ya previamente creada. Ademas contamos con un apartado de acceso rápido en la esquina inferior izquierda con el cual podremos acceder como "Paciente", "Especialista" o "Administrador.
