@@ -1,0 +1,37 @@
+<div *ngIf="!this.authService.isLogged && !this.isPaciente && !this.isEspecialista && !this.authService.isAdmin">
+  <div class="bienvenida">
+    <h1 class="tracking-in-expand">CLÍNICA ONLINE</h1>
+    <h2 class="tracking-in-expand">Trabajo Práctico N° 2</h2>
+    <h2 class="tracking-in-expand" style="margin-bottom: 1rem">
+      Laboratorio IV
+    </h2>
+    <p style="margin-bottom: 1rem" *ngIf="!this.authService.isLogged && !this.isPaciente && !this.isEspecialista && !this.authService.isAdmin ">
+      ¡Bienvenido a nuestra Clínica Online! Por favor, acceda para continuar.
+    </p>
+    <div *ngIf="!this.authService.isLogged && !this.isPaciente && !this.isEspecialista && !this.authService.isAdmin ">
+      <button class="custom-btn btn-ingresar" (click)="goToLogin()">
+        Iniciar sesión
+      </button>
+      <button class="custom-btn btn-registrarse" (click)="goToRegister()">
+        Registrarse
+      </button>
+    </div>
+  </div>
+  <div class="home-container"></div>
+</div>
+
+<div *ngIf="this.authService.isLogged || this.isPaciente || this.isEspecialista || this.authService.isAdmin">
+  <div class="bienvenida-logueado">
+    <h1 class="tracking-in-expand">CLÍNICA ONLINE</h1>
+    <h2 class="tracking-in-expand">Trabajo Práctico N° 2</h2>
+    <h2 class="tracking-in-expand" style="margin-bottom: 1rem">
+      Laboratorio IV
+    </h2>
+    <p style="margin-bottom: 1rem">
+      ¡Bienvenido a nuestra Clínica Online!
+    </p>
+    <div>
+    </div>
+  </div>
+  <div class="home-container"></div>
+</div>
