@@ -88,7 +88,7 @@
 ![](README/solicitarturnoadmin1.png)
 
 ## USUARIOS
-### En esta seccion se puede visualizar un listado de todos los usuarios registrados en la Clínica Online. Tendremos la opción de registrar un nuevo usuario con el rol de "Paciente", "Especialista" o "Administrador". Tambien contamos con una opcion para descargar el listado de usuarios en formato EXCEL y una opcion con un botón con la foto y nombre del usuario que al presionarlo descarga los datos de que turnos tomo un paciente y con quien en formato EXCEL.
+### En esta seccion se puede visualizar un listado de todos los usuarios registrados en la Clínica Online. Tendremos la opción de registrar un nuevo usuario con el rol de "Paciente", "Especialista" o "Administrador". Tambien contamos con una opcion para descargar el listado de usuarios en formato EXCEL y una opcion con un botón con la foto y nombre del usuario que al presionarlo descarga los datos de que turnos tomo un paciente y con quien en formato EXCEL. Contamos además con la funcionalidad de habilitar o deshabilitar el ingreso de un especialista al sistema y podemos visualizar la historia clínica de los pacientes.
 ![](README/usuarios.png)
 
 ## INFORMES
