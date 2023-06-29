@@ -25,7 +25,7 @@
           <a
             class="nav-link active"
             aria-current="page"
-            routerLink="/usuarios"
+            routerLink="/admin/usuarios"
             *ngIf="this.authService.isAdmin"
           >
             <button class="btn-nav">USUARIOS</button>
@@ -35,7 +35,7 @@
             <a
             class="nav-link active"
             aria-current="page"
-            routerLink="/turnos"
+            routerLink="/admin/turnos"
             *ngIf="this.authService.isAdmin"
             >
           <button class="btn-nav">TURNOS</button>
@@ -48,6 +48,17 @@
             routerLink="/mis-turnos"
           >
             <button class="btn-nav">Mis Turnos</button>
+          </a>
+        </li>
+
+         <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/pacientes"
+            *ngIf="this.isEspecialista"
+          >
+            <button class="btn-nav">PACIENTES</button>
           </a>
         </li>
 
@@ -68,6 +79,17 @@
             routerLink="/mi-perfil"
           >
             <button class="btn-nav">Mi perfil</button>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/admin/informes"
+            *ngIf="this.authService.isAdmin"
+          >
+            <button class="btn-nav">INFORMES</button>
           </a>
         </li>
       </ul>

@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div>
   <div class="contenedor-spinner" *ngIf="spinner">
     <div class="wrapper">
@@ -41,7 +42,17 @@
         <p style="color: #ffff;">{{ user?.obraSocial }}</p>
         <label>Tipo de Usuario</label>
         <p style="color: #ffff;">{{ user?.perfil }}</p>
-        <br />
+        <br/>
+        <button
+          *ngIf="hayHistorial"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          class="btn btn-info"
+          (click)="verHistorialClinico()"
+        >
+          Ver Historial Clínico
+        </button>
+        <p style="color: #ffff;" *ngIf="!hayHistorial">No hay historial cliníco disponible</p>
       </div>
     </div>
 
@@ -252,6 +263,133 @@
   </div>
   <div class="perfil-container"></div>
 </div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" style="margin: 0 auto;">
+    <div class="modal-content"  style="background-color: #236c7d; color: #000000;">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <button
+          type="button"
+          class="btn btn-danger"
+          style="
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          "
+          [disabled]="!hayHistorialFiltrado"
+          (click)="crearPDF()"
+        >
+          Descargar PDF
+        </button>
+        <label style="font-size: 1rem; font-weight: bolder; margin-right: 2rem"
+          >BUSCAR PROFESIONAL:
+        </label>
+           <input
+            class="input-busqueda"
+            type="text"
+            [(ngModel)]="palabraBusqueda"
+            (input)="filtrarHistorialClinico(palabraBusqueda)"
+            placeholder="Ingrese al especialista..."
+          />
+        <div id="pdf">
+          <p style="text-align: right; font-size: 1rem">
+            {{ fechaActual | wholeDate  }}
+          </p>
+          <div
+            style="display: flex; align-content: center; margin-bottom: 2rem"
+          >
+            <img
+              src="/assets/favicon.png"
+              style="width: 100px"
+              alt="logo"
+            />
+            <h2
+              style="
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: bolder;
+                padding-top: 2rem;
+                margin-left: 2rem;
+              "
+              id="exampleModalLabel"
+            >
+              CLÍNICA ONLINE
+            </h2>
+          </div>
+          <h1 style="text-align: center; font-size: 2rem">
+            HISTORIAL CLÍNICO DE
+            <span style="text-transform: uppercase; font-weight: bolder"
+              >{{ user?.apellido }} {{ user?.nombre }}</span
+            >
+          </h1>
+          <h3
+            *ngIf="!hayHistorialFiltrado"
+            style="text-align: center; color: rgb(121, 0, 0)"
+          >
+            No se encontró historial clínico del paciente con el especialista seleccionado.
+          </h3>
+          <div
+            *ngFor="let historial of historialClinicoFiltrado"
+            class="carta-historial"
+          >
+            <h3 style="background-color: #17444f;">
+              INFORME -
+              <span style="text-transform: uppercase">{{
+                historial?.especialidad
+              }}</span>
+              - {{ historial?.fecha | dayDate  }}
+            </h3>
+            <hr />
+            <p>
+              <span>Especialista: </span
+              >{{ historial?.especialista?.apellido }},
+              {{ historial?.especialista?.nombre }}
+            </p>
+            <p><span>Detalle: </span></p>
+            <p>Altura: {{ historial?.detalle?.altura }}</p>
+            <p>Peso: {{ historial?.detalle?.peso }}</p>
+            <p>Temperatura: {{ historial?.detalle?.temperatura }}</p>
+            <p>Presión: {{ historial?.detalle?.presion }}</p>
+            <p><span>Detalles adicionales: </span></p>
+            <p *ngIf="historial?.detalleAdicional?.clave1">
+              {{ historial?.detalleAdicional?.clave1 }}:
+              {{ historial?.detalleAdicional?.valor1 }}
+            </p>
+            <p *ngIf="historial?.detalleAdicional?.clave2">
+              {{ historial?.detalleAdicional?.clave2 }}:
+              {{ historial?.detalleAdicional?.valor2 }}
+            </p>
+            <p *ngIf="historial?.detalleAdicional?.clave3">
+              {{ historial?.detalleAdicional?.clave3 }}:
+              {{ historial?.detalleAdicional?.valor3 }}
+            </p>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="spinner" class="spinner-container">
+  <div class="spinner"></div>
+</div>
+
 
 
 

@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   userLogin: User = new User();
   spinner: boolean = false;
   notifyService: any;
+  userLog: any = null;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -74,6 +75,10 @@ export class LoginComponent implements OnInit {
                 this.spinner = false;
               } else if (usuarioLogueado.perfil === 'paciente' && data.user.emailVerified) {
                 this.notificationService.showSuccess("Se ha iniciado sesión correctamente.", "Inicio de sesión");
+                this.userLog = usuarioLogueado;
+                setTimeout(() => {
+                  this.authService.createUserLog(this.userLog);
+                }, 3000);
                 usuarioLogueado.aprobado = true;
                 this.authService.updateUser(usuarioLogueado);
                 this.authService.isLogged = true;
@@ -90,6 +95,10 @@ export class LoginComponent implements OnInit {
 
               } else {
                 this.notificationService.showSuccess("Se ha iniciado sesión correctamente.", "Inicio de sesión");
+                this.userLog = usuarioLogueado;
+                setTimeout(() => {
+                  this.authService.createUserLog(this.userLog);
+                }, 3000);
                 this.authService.isLogged = true;
                 this.router.navigate(['']);
 

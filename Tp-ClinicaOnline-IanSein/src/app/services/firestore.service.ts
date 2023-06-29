@@ -26,5 +26,4 @@ export class FirestoreService {
     return collection.valueChanges();
   }
 
-  
 }

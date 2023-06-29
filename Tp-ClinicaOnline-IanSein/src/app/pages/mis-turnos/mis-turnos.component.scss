@@ -10,8 +10,39 @@
   background-position: center;
   background-size: cover;
   min-height: 90.25vh;
+  height: 100%;
+}
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000000;
 }
 
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #17444f;
+  border-bottom-color: #4b9a81;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .turnos {
   position: absolute;
   overflow-y: scroll;
@@ -30,7 +61,6 @@
     color: #fff;
     background: rgba(0, 0, 0, 0.534);
     padding: 10px;
-    border-radius: 20px;
     box-shadow: 2px 2px 4px #000;
     font-weight: bolder;
     font-family: 'Quicksand', sans-serif;

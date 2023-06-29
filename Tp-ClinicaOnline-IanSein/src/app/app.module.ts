@@ -24,6 +24,14 @@ import { MisTurnosComponent } from './pages/mis-turnos/mis-turnos.component';
 import { TurnosComponent } from './pages/turnos/turnos.component';
 import { SolicitarTurnoComponent } from './pages/solicitar-turno/solicitar-turno.component';
 import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
+import { PacientesComponent } from './pages/pacientes/pacientes.component';
+import { InformesComponent } from './pages/informes/informes.component';
+import { BotonDirective } from './directivas/boton.directive';
+import { TarjetaDirective } from './directivas/tarjeta.directive';
+import { HoverDirective } from './directivas/hover.directive';
+import { WholeDatePipe } from './pipes/whole-date.pipe';
+import { DayDatePipe } from './pipes/day-date.pipe';
+import { DayWithHourPipe } from './pipes/day-with-hour.pipe';
 
 @NgModule({
   declarations: [
@@ -42,6 +50,14 @@ import { MiPerfilComponent } from './pages/mi-perfil/mi-perfil.component';
     TurnosComponent,
     SolicitarTurnoComponent,
     MiPerfilComponent,
+    PacientesComponent,
+    InformesComponent,
+    BotonDirective,
+    TarjetaDirective,
+    HoverDirective,
+    WholeDatePipe,
+    DayDatePipe,
+    DayWithHourPipe,
   ],
   imports: [
     BrowserModule,

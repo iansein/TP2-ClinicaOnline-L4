@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div>
   <div class="contenedor-spinner" *ngIf="spinner">
     <div class="wrapper">
@@ -49,7 +50,7 @@
             style="cursor: pointer"
             *ngFor="let turn of turnosFiltrados"
           >
-            <td>{{ turn.fecha.seconds * 1000 | date: 'dd/MM/yyyy' }}</td>
+            <td>{{ turn.fecha | dayDate}}</td>
             <td>
               {{ turn.especialista.apellido }} {{ turn.especialista.nombre }}
             </td>
@@ -95,7 +96,7 @@
                 type="text"
                 class="form-control"
                 style="margin-top: 0.5rem"
-                placeholder="Comentario de cancelación..."
+                placeholder="Escriba su comentario de cancelación"
                 [(ngModel)]="comentarioCancelacion"
                 *ngIf="
                   cancelacionTurno &&
@@ -121,7 +122,7 @@
                 type="text"
                 class="form-control"
                 style="margin-top: 0.5rem"
-                placeholder="Comentario de cancelación..."
+                placeholder="Escriba su comentario de cancelación"
                 [(ngModel)]="turn.comentarioPaciente"
                 *ngIf="
                   vistaComentario &&
@@ -154,7 +155,7 @@
                 type="text"
                 class="form-control"
                 style="margin-top: 0.5rem"
-                placeholder="Comentario de calificación..."
+                placeholder="Escriba su comentario de calificación"
                 [(ngModel)]="comentarioCalificacion"
                 *ngIf="
                   vistaComentarioCalificacion &&
@@ -208,7 +209,7 @@
             style="cursor: pointer"
             *ngFor="let turn of turnosFiltrados"
           >
-            <td>{{ turn.fecha.seconds * 1000 | date: 'dd/MM/yyyy' }}</td>
+            <td>{{ turn.fecha | dayDate }}</td>
             <!-- <td>
               {{ turn.especialista.apellido }} {{ turn.especialista.nombre }}
             </td> -->
@@ -225,7 +226,7 @@
                 style="box-shadow: 2px 2px 4px #000; margin-right: 1rem"
                 (click)="cancelarTurnoEspecialista(turn)"
                 *ngIf="
-                  turn.estado != 'aceptado' &&
+                  turn.estado == 'aceptado' &&
                   turn.estado != 'realizado' &&
                   turn.estado != 'rechazado' &&
                   turn.estado != 'cancelado' &&
@@ -372,7 +373,7 @@
                 type="text"
                 class="form-control"
                 style="margin-top: 0.5rem"
-                placeholder="Comentario de cancelación..."
+                placeholder="Escriba su comentario de cancelación"
                 [(ngModel)]="turn.comentarioPaciente"
                 *ngIf="
                   vistaComentario &&
@@ -627,4 +628,8 @@
       </div>
     </div>
   </div>
+</div>
+
+<div *ngIf="spinner" class="spinner-container">
+  <div class="spinner"></div>
 </div>

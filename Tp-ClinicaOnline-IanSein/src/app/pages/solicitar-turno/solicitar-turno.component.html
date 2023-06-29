@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div>
   <div class="contenedor-spinner" *ngIf="spinner">
     <div class="wrapper">
@@ -45,7 +46,6 @@
             <img
               class="carta-especialista"
               style="
-                border-radius: 50%;
                 width: 15rem;
                 height: 15rem;
                 display: flex;
@@ -58,17 +58,54 @@
         </div>
       </div>
     </div>
-
     <div *ngIf="activeEspecialista && !turnsSelectionMenu">
       <h3>ESPECIALIDADES</h3>
       <div class="row">
         <div
-          class="col especialidades"
-          style="border-radius: 2rem"
+          class="col"
           *ngFor="let especialidad of activeEspecialista.especialidad"
-          (click)="showTurns(especialidad)"
         >
-          <h1 style="text-align: center; margin: 0 auto; margin-top: 170px; font-family: Raleway, sans-serif; color: #ffff;">{{ especialidad.nombre }}</h1>
+          <h1 class="especialidad-p">{{especialidad.nombre}}</h1>
+          <button class="especialidades" (click)="showTurns(especialidad)" *ngIf="especialidad.nombre == 'Cirujano'">
+          <img
+            src="../../../assets/cirujano.png"
+            alt=""
+          />
+          </button>
+          
+          <button class="especialidades" (click)="showTurns(especialidad)" *ngIf="especialidad.nombre == 'Odontología'">
+          <img
+            src="../../../assets/odontologia.png"
+            alt=""
+          />
+          </button>
+
+          <button class="especialidades" (click)="showTurns(especialidad)" *ngIf="especialidad.nombre == 'Oftalmología'">
+          <img
+            src="../../../assets/oftalmologia.png"
+            alt=""
+          />
+          </button>
+
+          <button class="especialidades" (click)="showTurns(especialidad)" *ngIf="especialidad.nombre == 'Kinesiología'">
+          <img
+            src="../../../assets/kinesiologia.png"
+            alt=""
+          />
+          </button>
+
+          <button class="especialidades" (click)="showTurns(especialidad)" *ngIf="
+              especialidad.nombre != 'Cirujano' &&
+              especialidad.nombre != 'Odontología' &&
+              especialidad.nombre != 'Oftalmología' &&
+              especialidad.nombre != 'Kinesiología'
+            ">
+          <img
+            (click)="showTurns(especialidad)"
+            src="../../../assets/default.png"
+            alt=""
+          />
+          </button>
         </div>
       </div>
     </div>
@@ -83,97 +120,42 @@
           </h1>
           <h1 class="especialista-activo">{{ speciality.nombre }}</h1>
         </div>
-        <div class="col turnos-desk">
+        <div class="col turnos-desk" style="overflow-y: scroll; height: 35rem">
           <button
-            class="btn btn-success"
+            class="btn btn-turnos"
             style="
               text-transform: uppercase;
               margin-left: 0.5rem;
               margin-right: 0.5rem;
               margin-bottom: 0.5rem;
+              width: 150px;
+              height: 150px;
             "
-            *ngFor="let dia of diasAMostrar"
-            (click)="loadFreeHoursOneDay(dia)"
+            *ngFor="let turno of turnosAMostrar"
+            (click)="seleccionarTurno(turno)"
           >
-            {{ dia | date: 'd/M/yy'}}
+          <p style="font-size: 15px;">{{ turno.fecha | dayWithHour}}</p>
           </button>
           <br />
           <p *ngIf="diasAMostrar.length == 0" style="text-align: center">
             No hay turnos disponibles
           </p>
-          <div style="overflow-y: scroll; height: 15rem">
-            <button
-              class="btn btn-info"
-              style="
-                width: 4rem;
-                height: 4rem;
-                border-radius: 1rem;
-                margin: 0.1rem;
-              "
-              *ngFor="let turno of turnosDeUnDiaAMostrar"
-              (click)="seleccionarTurno(turno)"
-            >
-              {{ turno.fecha | date: 'h:mm'  }}
-            </button>
-          </div>
-          <button
-            *ngIf="botonPedirTurno"
-            class="btn btn-primary"
-            style="margin-top: 1rem; width: 100%"
-            (click)="solicitarTurno()"
-          >
-            Solicitar Turno
-          </button>
-        </div>
-      </div>
-
-      <div class="row turnos-resp">
-        <div class="col">
-          <button
-            class="btn btn-success btn-dia"
-            style="
-              text-transform: uppercase;
-              margin-left: 0.5rem;
-              margin-right: 0.5rem;
-              margin-bottom: 0.5rem;
-            "
-            *ngFor="let dia of diasAMostrar"
-            (click)="loadFreeHoursOneDay(dia)"
-          >
-            {{ dia  | date: 'd/M/yy'}}
-          </button>
-          <br />
-          <p *ngIf="diasAMostrar.length == 0" style="text-align: center">
-            No hay turnos disponibles
-          </p>
-          <div class="contenedor-btn-hora">
-            <button
-              class="btn btn-info"
-              style="
-                width: 4rem;
-                height: 4rem;
-                border-radius: 1rem;
-                margin: 0.1rem;
-                
-              "
-              *ngFor="let turno of turnosDeUnDiaAMostrar"
-              (click)="seleccionarTurno(turno)"
-            >
-              {{ turno.fecha | date: 'h:mm'  }}
-            </button>
-          </div>
-          <button
-            *ngIf="botonPedirTurno"
-            class="btn btn-primary"
-            style="margin-top: 1rem; width: 100%"
-            (click)="solicitarTurno()"
-          >
-            Solicitar Turno
-          </button>
         </div>
       </div>
     </div>
+    <button
+      *ngIf="botonPedirTurno"
+      class="btn btn-primary"
+      style="margin-top: 1rem; width: 100%"
+      (click)="solicitarTurno()"
+    >
+      Solicitar Turno
+    </button>
   </div>
 
   <div class="solicitar-turno-container"></div>
+</div>
+
+<div *ngIf="spinner" class="spinner-container">
+  <div class="spinner"></div>
 </div>

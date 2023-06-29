@@ -19,6 +19,7 @@ export class SolicitarTurnoComponent implements OnInit {
 
   especialistasList: any[] = [];
   pacientesList: any[] = [];
+  nuevoArrayDeTurnos: any[] = [];
   activeEspecialista: any = null;
   activePaciente: any = null;
   speciality: any = null;
@@ -125,41 +126,9 @@ export class SolicitarTurnoComponent implements OnInit {
     });
 
     aux.sort((a, b) => a - b);
-
     this.diasAMostrar = [...aux];
   }
 
-  loadFreeHours(day: string) {
-    // console.log(day);
-    const currentDate = new Date();
-    const listaTurnosDelEspecialista = this.currentSpecialistTurnList.filter(
-      (t) => t.especialista.mail == this.activeEspecialista.mail
-    );
-    const turnosEspecialidad =
-      // listaTurnosDelEspecialista[0].turnos =
-      listaTurnosDelEspecialista[0].turnos.filter((t: any) => {
-        return (
-          t.especialidad == this.speciality.nombre &&
-          currentDate.getTime() < new Date(t.fecha.seconds * 1000).getTime()
-        );
-      });
-    // console.log(listaTurnosDelEspecialista[0].turnos);
-    // console.log(turnosEspecialidad);
-    const turnos15dias: any[] = [];
-    for (let i = 0; i < turnosEspecialidad.length; i++) {
-      const turno = { ...turnosEspecialidad[i] };
-      if (
-        new Date(turno.fecha.seconds * 1000).getTime() <=
-        currentDate.getTime() + 84600000 * 15 &&
-        turno.estado == 'disponible'
-      ) {
-        turno.fecha = new Date(turno.fecha.seconds * 1000);
-        turnos15dias.push(turno);
-      }
-    }
-    console.log(turnos15dias);
-    this.turnosAMostrar = [...turnos15dias];
-  }
 
   loadFreeHoursOneDay(date: Date) {
     this.spinner = true;
@@ -193,8 +162,40 @@ export class SolicitarTurnoComponent implements OnInit {
         }
       }
       this.spinner = false;
-      this.turnosDeUnDiaAMostrar = [...turnosDeUndia];
+      return this.turnosDeUnDiaAMostrar = [...turnosDeUndia];
     }, 500);
+  }
+
+  loadFreeHours(day: string) {
+    // console.log(day);
+    const currentDate = new Date();
+    const listaTurnosDelEspecialista = this.currentSpecialistTurnList.filter(
+      (t) => t.especialista.mail == this.activeEspecialista.mail
+    );
+    const turnosEspecialidad =
+      // listaTurnosDelEspecialista[0].turnos =
+      listaTurnosDelEspecialista[0].turnos.filter((t: any) => {
+        return (
+          t.especialidad == this.speciality.nombre &&
+          currentDate.getTime() < new Date(t.fecha.seconds * 1000).getTime()
+        );
+      });
+    // console.log(listaTurnosDelEspecialista[0].turnos);
+    // console.log(turnosEspecialidad);
+    const turnos15dias: any[] = [];
+    for (let i = 0; i < turnosEspecialidad.length; i++) {
+      const turno = { ...turnosEspecialidad[i] };
+      if (
+        new Date(turno.fecha.seconds * 1000).getTime() <=
+        currentDate.getTime() + 84600000 * 15 &&
+        turno.estado == 'disponible'
+      ) {
+        turno.fecha = new Date(turno.fecha.seconds * 1000);
+        turnos15dias.push(turno);
+      }
+    }
+    console.log(turnos15dias);
+    this.turnosAMostrar = [...turnos15dias];
   }
 
   seleccionarTurno(turno: any) {

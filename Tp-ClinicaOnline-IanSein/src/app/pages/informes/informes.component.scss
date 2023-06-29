@@ -1,0 +1,128 @@
+.informes-container {
+  font-family: 'Raleway', sans-serif;
+  background-image: url("../../../assets/misturnos.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 90.25vh;
+  height: 100%;
+}
+td{
+  color: #000;
+}
+th{
+  color: #000;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000000;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #17444f;
+  border-bottom-color: #4b9a81;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.contenedor-estadisticas {
+  position: absolute;
+  width: 95vw;
+  height: 70vh;
+  top: 17%;
+  left: 2.5%;
+  z-index: 100;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgb(32, 121, 120);
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.534);
+    padding: 10px;
+    box-shadow: 2px 2px 4px #000;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.carta-especialista {
+  height: 50vh;
+  border: 2px solid #fff;
+  background: #17444f;
+  box-shadow: 2px 2px 4px #000;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 20px;
+  img {
+    margin-top: 2rem;
+    width: 9rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 1px 1px #000;
+    margin-top: 1rem;
+  }
+  small {
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+// RESPONSIVE
+
+@media screen and (max-width: 480px) {
+  .informes-container {
+    min-height: 100vh;
+  }
+  .contenedor-estadisticas {
+    position: absolute;
+    width: 95vw;
+    height: auto;
+    top: 12%;
+    left: 2.5%;
+  }
+  .carta-especialista {
+    width: 98%;
+    height: auto;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+}

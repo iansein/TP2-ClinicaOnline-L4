@@ -2,16 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Raleway:wght@800&display=swap');
 
 .user-buttons {
-  background: rgb(32, 121, 120);
-  position: absolute;
-  margin: 0 auto;
-  top: 160%;
-  left: -39%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  background: rgb(32, 121, 120);
   border-radius: 10px;
   border: #fff 3px solid;
-  margin-top: 10px;
 }
 
 .user-button {

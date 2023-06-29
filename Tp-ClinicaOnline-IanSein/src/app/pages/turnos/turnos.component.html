@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div>
   <div class="contenedor-spinner" *ngIf="spinner">
     <div class="wrapper">
@@ -49,7 +50,7 @@
             style="cursor: pointer"
             *ngFor="let turn of turnosFiltrados"
           >
-            <td>{{  turn.fecha.seconds * 1000 | date: 'dd/MM/yyyy'  }}</td>
+            <td>{{  turn.fecha | dayDate }}</td>
             <td>
               {{ turn.especialista.apellido }} {{ turn.especialista.nombre }}
             </td>
@@ -103,6 +104,8 @@
       </table>
     </div>
   </div>
-
   <div class="turnos-container"></div>
+</div>
+<div *ngIf="spinner" class="spinner-container">
+  <div class="spinner"></div>
 </div>

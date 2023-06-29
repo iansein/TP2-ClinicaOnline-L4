@@ -29,9 +29,10 @@ export class TurnosComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private notificationService: NotificationService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
+    this.spinner = true;
     this.authService.getTurnList().subscribe((turns: any) => {
       this.currentSpecialistTurnList = turns;
       this.turnList = [];
@@ -78,7 +79,7 @@ export class TurnosComponent implements OnInit {
         const index = turnosEspecialista.turnos.findIndex((t: any) => {
           return (
             new Date(t.fecha.seconds * 1000).getTime() ==
-              new Date(turno.fecha.seconds * 1000).getTime() &&
+            new Date(turno.fecha.seconds * 1000).getTime() &&
             t.especialidad == turno.especialidad
           );
         });
