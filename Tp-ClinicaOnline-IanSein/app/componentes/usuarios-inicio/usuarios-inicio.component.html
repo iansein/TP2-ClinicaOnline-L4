@@ -1,0 +1,9 @@
+<div class="user-buttons">
+  <div *ngFor="let usuario of listaUsuarios" class="user-button">
+    <button class="fab-button" (click)="clickListado(usuario)">
+      <img src="{{ usuario.imagen1 }}" alt="Imagen de usuario" class="user-image">
+    </button>
+    <label class="user-name">{{ usuario.nombre }}</label>
+    <label class="user-name">{{ usuario.perfil }}</label>
+  </div>
+</div>

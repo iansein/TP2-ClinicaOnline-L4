@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+.navbar {
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+  background: linear-gradient(to bottom, #236c7d, #207978, #4b9a81);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  box-shadow: 2px 2px 4px #17444f;
+  text-align: center;
+  z-index: 1000;
+}
+
+.imagenNav {
+  width: 50px;
+  height: 50px;
+  margin-right: 2rem;
+  border-radius: 30%;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.user-info-content {
+  display: flex;
+  align-items: center;
+}
+
+.user-info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.user-info-name {
+  color: #fff;
+  font-weight: bolder;
+  margin-top: 10px;
+}
+
+.img-btn {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.user-info-details {
+  display: flex;
+  align-items: center;
+}
+
+.btn-nav {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.btn-nav::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.btn-nav:hover {
+  transition-delay: 0.5s;
+}
+
+.btn-nav:hover::before {
+  width: 100%;
+}
+
+.btn-nav:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: rgb(0, 0, 0);
+}
+
+.btn-login:hover {
+  transition-delay: 0.4s;
+}
+.btn-login::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn-registro:hover {
+  height: 100%;
+  transition-delay: 0.4s;
+}
+
+.btn-registro::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn-logout {
+  font-size: 30px;
+  background-color: rgb(131, 12, 12); 
+  color: #fff;
+  border: none;;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 50px;
+  padding: 10px;
+}
+.btn-logout:hover{
+  background-color: rgb(223, 35, 35); 
+}
+
+
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000000;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #17444f;
+  border-bottom-color: #4b9a81;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

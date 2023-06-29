@@ -1,0 +1,73 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Raleway:wght@800&display=swap');
+
+.main {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  width: 500px;
+  height: 650px;
+  background-color: rgb(32, 121, 120);
+  margin-left: 30%;
+  border-radius: 10px;
+  right: -100%;
+  top: -0%;
+  color: #fff;
+  padding: 5rem;
+  border: 3px solid #fff;
+  padding-top: 0px;
+  box-shadow: 2px 2px 4px #000;
+  overflow: hidden;
+}
+
+.custom-list {
+  border: 1px solid #ffffff;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: style type none;;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1px;
+}
+
+.btn {
+  padding: 1;
+  width: 100%;
+  background: transparent;
+  border: 1px groove rgba(0, 0, 0, 0.315);
+  border-radius: 0;
+  text-align: left;
+  margin-top: 0;
+  height: 20px;
+}
+
+.btn:hover {
+  background-color: #61d7b2;
+}
+
+.icono{
+  height: 50px;
+}
+
+.btn-lista{
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  padding: 1;
+  width: 100%;
+  background: transparent;
+  border: 1px groove rgb(0, 0, 0);
+  border-radius: 0;
+  text-align: left;
+  height: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.btn-lista:hover{
+  background-color: #61d7b2;
+}
