@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Raleway:wght@800&display=swap');
+/* BASIC */
+
+.turnos-container {
+  font-family: 'Raleway', sans-serif;
+  background-image: url("../../../assets/misturnos.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 90.25vh;
+  height: 100%;
+}
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000000;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #17444f;
+  border-bottom-color: #4b9a81;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.turnos {
+  position: absolute;
+  overflow-y: scroll;
+  width: 90vw;
+  height: 80vh;
+  top: 18%;
+  left: 5%;
+  //   transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #236c7d;
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.534);
+    padding: 10px;
+    box-shadow: 2px 2px 4px #000;
+    font-weight: bolder;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    margin-bottom: 1rem;
+  }
+  label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1rem;
+    color: rgb(100, 100, 100);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.tabla-usuario {
+  //   position: absolute;
+  //   width: 90vw;
+  height: 75%;
+  overflow-y: scroll;
+  z-index: 100;
+  left: 5%;
+  top: 18%;
+  background: #000;
+  color: #fff;
+  padding: 1rem;
+  background: #17444f;
+  border: 2px solid #fff;
+  box-shadow: 2px 2px 4px #000;
+  text-shadow: 1px 1px #000;
+  h3 {
+    text-align: center;
+  }
+  table {
+    color: #fff;
+    font-weight: 400;
+  }
+}
+
+.tr-tabla:hover {
+  color: #fff;
+  background: #4b9a81;
+  transition: background 0.5s;
+}
+
+.btn-aceptar{
+    background: #03a21e;
+  color: #ffff;
+}
+.btn-aceptar:hover {
+  background: #0ad52c;
+  box-shadow: 2px 2px 4px #000;
+}
+
+.btn-especialista:hover {
+  background: rgb(0, 0, 0);
+  box-shadow: 2px 2px 4px #000;
+}
+
+.btn-cancelar{
+  background: #a30202;
+  color: #ffff;
+}
+.btn-cancelar:hover {
+  background: #ff0000;
+  box-shadow: 2px 2px 4px #000;
+}
+
+.btn-resena{
+  background: #025290;
+  color: #ffff;
+}
+.btn-resena:hover {
+  background: #0277d0;
+  box-shadow: 2px 2px 4px #000;
+}
+.btn-confirmar:hover {
+  background: #0099ff;
+}
+
+.estado {
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(255, 255, 255);
+  background: #270c52;
+}
+
+.mensaje-error {
+  color: rgb(187, 5, 5);
+  padding: 0px 5px;
+  border-radius: 5px;
+}
+
+.contenedor-form {
+  color: #fff;
+  font-weight: bolder;
+  padding: 0.5rem;
+  background: #17444f;
+}
+
+.modal-body{
+  background-color: #236c7d;
+  color: #fff;
+}
+
+.contenedor-adicionales {
+  color: #fff;
+  font-weight: bolder;
+  padding: 0.5rem;
+  background: #17444f;
+}
+
+.input-busqueda {
+  width: 15rem;
+  border: 3px solid rgb(0, 119, 255);
+  border-radius: 10px;
+  height: 2rem;
+  padding-left: 1rem;
+  box-shadow: 2px 2px 4px #000;
+}
+
+.input-busqueda:focus {
+  border: 3px solid rgb(0, 119, 255);
+  box-shadow: 0 0 12px #0099ff;
+  transition: box-shadow 0.5s;
+}
+
+
+// RESPONSIVE
+
+@media screen and (max-width: 480px) {
+  .turnos-container {
+    min-height: 100vh;
+  }
+
+  .turnos {
+    width: 98vw;
+    top: 12%;
+    left: 1%;
+    padding-bottom: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .input-busqueda {
+    width: 10rem;
+    margin-bottom: 1rem;
+  }
+
+  .tabla-usuario {
+    width: 100%;
+    height: 75%;
+    left: 5%;
+    top: 18%;
+    padding: 0.5rem;
+  }
+
+  .table {
+    width: 100%;
+  }
+  
+}
